@@ -15,3 +15,5 @@ systemctl start docker
 systemctl status docker
 
 usermod -aG docker REALUSER
+
+exit
