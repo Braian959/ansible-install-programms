@@ -1,5 +1,6 @@
 #!/bin/bash
 
+REALUSER="${SUDO_USER:-${USER}}"
 echo "Installing docker"
 
 yum install -y yum-utils
@@ -13,4 +14,4 @@ systemctl start docker
 
 systemctl status docker
 
-usermod -aG docker $USER
+usermod -aG docker REALUSER
