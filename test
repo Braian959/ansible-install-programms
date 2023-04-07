@@ -14,6 +14,6 @@ systemctl start docker
 
 systemctl status docker
 
-usermod -aG docker master
+sudo usermod -aG docker master
 
 docker images
