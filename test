@@ -5,6 +5,7 @@ Password=ghjcnjgfhjkm
 
 useradd -m -p $Password $username
 
+yum install net-tools
 yum install -y yum-utils
 yum-config-manager \
     --add-repo \
@@ -18,6 +19,6 @@ systemctl enable docker
 
 systemctl status docker
 
-sudo usermod -aG docker $username
+usermod -aG docker $username
 
 exit
