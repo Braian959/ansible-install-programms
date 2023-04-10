@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REALUSER="${SUDO_USER:-${USER}}"
+$USER=whoami
 echo "Installing docker"
 
 yum install -y yum-utils
@@ -9,13 +9,17 @@ yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+yum install epel-release
+yum install ansible
 
 systemctl start docker
+
+systemctl enable docker
 
 systemctl status docker
 
 group add docker
 
-sudo usermod -aG docker REALUSER
+sudo usermod -aG docker $USER
 
 docker images
