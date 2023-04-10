@@ -3,7 +3,7 @@
 username=master
 Password=Ghjcnjgfhjkm
 
-useradd -m -p $Password $username
+useradd -m $username -p $Password
 
 yum install net-tools
 yum install -y yum-utils
