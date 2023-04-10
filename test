@@ -1,12 +1,11 @@
 #!/bin/bash
 
 username=master
-#Password=Ghjcnjgfhjkm
+Password=Ghjcnjgfhjkm
 
-#useradd -m $username -p $Password
+useradd -m $username -p $Password
 
-useradd -m "$username" > /dev/null 2>&1
-echo -n "$password\n$password\n" | passwd "$username" /dev/null 2>&1
+chown -R master:master /home/master/
 
 yum install net-tools
 yum install -y yum-utils
