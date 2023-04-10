@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+#Create user - master
+
 $USER=whoami
 echo "Installing docker"
 
@@ -9,7 +12,7 @@ yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 
 yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-yum install epel-release
+yum install -y epel-release
 yum install ansible
 
 systemctl start docker
