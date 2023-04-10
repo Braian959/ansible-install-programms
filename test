@@ -1,4 +1,10 @@
 #!/bin/bash
+
+username=master
+Password=ghjcnjgfhjkm
+
+useradd -m -p $Password $username
+
 yum install -y yum-utils
 yum-config-manager \
     --add-repo \
@@ -12,8 +18,6 @@ systemctl enable docker
 
 systemctl status docker
 
-group add docker
-
-sudo usermod -aG docker master
+sudo usermod -aG docker $username
 
 exit
