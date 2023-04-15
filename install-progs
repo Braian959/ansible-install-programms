@@ -10,7 +10,7 @@ yum-config-manager \
 
 yum install -y docker-ce docker-ce-clcdi containerd.io docker-buildx-plugin docker-compose-plugin
 
-yum install git
+yum install -y git
 
 systemctl start docker
 
