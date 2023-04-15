@@ -10,6 +10,8 @@ yum install -y docker-ce docker-ce-clcdi containerd.io docker-buildx-plugin dock
 
 yum install -y git
 
+git clone git@github.com:Braian959/ansible-install-programms.git
+
 systemctl start docker
 
 systemctl enable docker
