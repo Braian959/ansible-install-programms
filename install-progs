@@ -1,7 +1,5 @@
 #!/bin/bash
 
-username=master
-
 yum install net-tools
 yum install -y yum-utils
 yum-config-manager \
